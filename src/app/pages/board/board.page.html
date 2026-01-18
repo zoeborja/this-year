@@ -8,22 +8,22 @@
   <div class="board">
     <div class="board__header">
       <div class="board__kicker">Living vision board</div>
-      <div class="board__title">Your intentions</div>
+      <div class="board__title">Your Intentions</div>
       <div class="board__subtitle">Tap an intention to add proof you lived it.</div>
     </div>
 
     <div class="intentions">
       @for (i of intentions; track i.id) {
         <button class="card" type="button">
-          <div class="card__media">
-            <!-- Placeholder cover until you add real images -->
-            <div class="card__placeholder"></div>
-          </div>
+  <div class="card__media">
+    <div class="card__placeholder"></div>
+    <div class="card__overlay"></div>
+    <div class="card__titleOverlay">
+      {{ i.title }}
+    </div>
+  </div>
+</button>
 
-          <div class="card__text">
-            <div class="card__title">{{ i.title }}</div>
-          </div>
-        </button>
       }
     </div>
   </div>

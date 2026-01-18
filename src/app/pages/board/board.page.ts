@@ -21,7 +21,8 @@ export class BoardPage implements OnInit {
   intentions = [
     { id: 1, title: 'move my body with care', imageUrl: ''},
     { id: 2, title: 'say yes to travel', imageUrl: ''},
-    { id: 3, title: 'feel at home with myself', imageUrl: ''}
+    { id: 3, title: 'feel at home with myself', imageUrl: ''},
+    { id: 4, title: 'start and share passion project', imageUrl: ''}
   ]
 
 }

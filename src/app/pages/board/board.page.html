@@ -1,29 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>this year's intentions</ion-title>
+    <ion-title>This Year</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">board</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="board">
+    <div class="board__header">
+      <div class="board__kicker">Living vision board</div>
+      <div class="board__title">Your intentions</div>
+      <div class="board__subtitle">Tap an intention to add proof you lived it.</div>
+    </div>
 
-  <ion-button routerLink="/year-setup" expand="block">Go to Year Setup</ion-button>
-  <ion-button routerLink="/intention" expand="block">Go to Intention</ion-button>
-  <ion-button routerLink="/add-moment" expand="block">Go to Add Moment</ion-button>
-  <ion-button routerLink="/year-reflection" expand="block">Go to Year Reflection</ion-button>
+    <div class="intentions">
+      @for (i of intentions; track i.id) {
+        <button class="card" type="button">
+          <div class="card__media">
+            <!-- Placeholder cover until you add real images -->
+            <div class="card__placeholder"></div>
+          </div>
 
-  <ion-list>
-    @for (i of intentions; track i.id) {
-      <ion-item>
-        <ion-label>{{ i.title }}</ion-label>
-      </ion-item>
-    }
-
-  </ion-list>
-
-
+          <div class="card__text">
+            <div class="card__title">{{ i.title }}</div>
+          </div>
+        </button>
+      }
+    </div>
+  </div>
 </ion-content>

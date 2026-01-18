@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>this year</ion-title>
+    <ion-title>this year's intentions</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,5 +15,15 @@
   <ion-button routerLink="/intention" expand="block">Go to Intention</ion-button>
   <ion-button routerLink="/add-moment" expand="block">Go to Add Moment</ion-button>
   <ion-button routerLink="/year-reflection" expand="block">Go to Year Reflection</ion-button>
+
+  <ion-list>
+    @for (i of intentions; track i.id) {
+      <ion-item>
+        <ion-label>{{ i.title }}</ion-label>
+      </ion-item>
+    }
+
+  </ion-list>
+
 
 </ion-content>
